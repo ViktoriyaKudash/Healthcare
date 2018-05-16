@@ -1,0 +1,11 @@
+D:\УНИВЕР\2kurs\2semestr\курсач\Healthcare\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.csproj.CoreCompileInputs.cache
+D:\УНИВЕР\2kurs\2semestr\курсач\Healthcare\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.dll
+D:\УНИВЕР\2kurs\2semestr\курсач\Healthcare\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.pdb
+D:\УНИВЕР\2kurs\2semestr\курсач\Healthcare\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.dll
+D:\УНИВЕР\2kurs\2semestr\курсач\Healthcare\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.pdb
+D:\УНИВЕР\2kurs\2semestr\курсач\Healthcare\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.dll.config
+D:\УНИВЕР\2kurs\2semestr\курсач\Healthcare\Healthcare.DataAccess\bin\Debug\EntityFramework.dll
+D:\УНИВЕР\2kurs\2semestr\курсач\Healthcare\Healthcare.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\УНИВЕР\2kurs\2semestr\курсач\Healthcare\Healthcare.DataAccess\bin\Debug\EntityFramework.xml
+D:\УНИВЕР\2kurs\2semestr\курсач\Healthcare\Healthcare.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\УНИВЕР\2kurs\2semestr\курсач\Healthcare\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.csprojResolveAssemblyReference.cache
