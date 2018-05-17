@@ -16,11 +16,11 @@ namespace DoctorApp
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             ShutdownMode = ShutdownMode.OnMainWindowClose;
-            MainWindow = new MainWindow();
+            MainWindow = new MainView();
 
             UnitOfWork.CreateDatabaseIfNotExists();
 
-            var loginWindow = new LoginWindow();
+            var loginWindow = new LoginView();
             var result = loginWindow.ShowDialog();
 
             if (result.HasValue && result.Value == true)

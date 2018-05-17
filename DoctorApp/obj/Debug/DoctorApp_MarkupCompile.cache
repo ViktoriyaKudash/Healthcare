@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\УНИВЕР\2kurs\2semestr\курсач\Healthcare\DoctorApp\obj\Debug\
+C:\Users\nikolay.kabash\Downloads\Healthcare-master\Healthcare-master\DoctorApp\obj\Debug\
 DoctorApp
 none
 false
 DEBUG;TRACE
-D:\УНИВЕР\2kurs\2semestr\курсач\Healthcare\DoctorApp\App.xaml
-101906041076
+C:\Users\nikolay.kabash\Downloads\Healthcare-master\Healthcare-master\DoctorApp\App.xaml
+101172230503
 
-23727789509
-19-2178739
-Themes\DarkThemeDictionary.xaml;Resources\ResourceDictionary.xaml;Themes\WhiteThemeDictionary.xaml;Views\PatientsUserControl.xaml;Views\PatientWindow.xaml;Views\RegisterWindow.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\VisitsUserControl.xaml;Views\VisitWindow.xaml;
+30228168213
+19-1964504543
+Themes\DarkThemeDictionary.xaml;Resources\ResourceDictionary.xaml;Themes\WhiteThemeDictionary.xaml;Views\PatientsView.xaml;Views\PatientAddEditView.xaml;Views\RegisterView.xaml;Views\LoginView.xaml;Views\MainView.xaml;Views\VisitsView.xaml;Views\VisitAddEdtiView.xaml;
 
 False
 

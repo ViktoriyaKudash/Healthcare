@@ -6,74 +6,95 @@ using System.Threading.Tasks;
 
 namespace Healthcare.DataAccess
 {
-    public class GenericRepository<TModel>
+	public class GenericRepository<TModel>
         where TModel : BaseModel
     {
-        private DbContext context;
-        private DbSet<TModel> dbSet;
+		private Func<ApplicationContext> createContext;
 
-        public GenericRepository(DbContext context)
+		public GenericRepository(Func<ApplicationContext> createContext)
+		{
+			this.createContext = createContext;
+		}
+
+		public IEnumerable<TModel> Get()
         {
-            this.context = context;
-
-            dbSet = context.Set<TModel>();
-        }
-
-        public IEnumerable<TModel> Get()
-        {
-            return dbSet.AsNoTracking().ToList();
+			using(var context = createContext())
+			{
+				return context.Set<TModel>().AsNoTracking().ToList();
+			}
         }
 
         public IEnumerable<TModel> Get(Func<TModel, bool> predicate)
         {
-            return dbSet.AsNoTracking().Where(predicate).ToList();
+			using(var context = createContext())
+			{
+				return context.Set<TModel>().AsNoTracking().Where(predicate).ToList();
+			}
         }
 
         public async Task<IEnumerable<TModel>> GetAsync()
         {
-            return await dbSet.AsNoTracking().ToListAsync();
+			using(var context = createContext())
+			{
+				return await context.Set<TModel>().AsNoTracking().ToListAsync();
+			}
         }
 
         public TModel FindById(int id)
         {
-            return dbSet.Find(id);
+			using(var context = createContext())
+			{
+				return context.Set<TModel>().Find(id);
+			}
         }
 
         public void Create(TModel item)
         {
-            dbSet.Add(item);
-            context.SaveChanges();
+			using(var context = createContext())
+			{
+				context.Set<TModel>().Add(item);
+				context.SaveChanges();
+			}
         }
 
         public void CreateWithTransaction(TModel item)
         {
-            var transaction = context.Database.BeginTransaction();
-    
-            try
-            {
-                dbSet.Add(item);
-                context.SaveChanges();
+			using(var context = createContext())
+			{
+				var transaction = context.Database.BeginTransaction();
 
-                transaction.Commit();
-            }
-            catch (Exception)
-            {
-                transaction.Rollback();
+				try
+				{
+					context.Set<TModel>().Add(item);
+					context.SaveChanges();
 
-                throw;
-            }
+					transaction.Commit();
+				}
+				catch(Exception)
+				{
+					transaction.Rollback();
+
+					throw;
+				}
+			}
         }
 
         public void Update(TModel item)
         {
-            context.Entry(item).State = EntityState.Modified;
-            context.SaveChanges();
+			using(var context = createContext())
+			{
+				context.Entry(item).State = EntityState.Modified;
+				context.SaveChanges();
+			}
         }
 
         public void Remove(TModel item)
         {
-            dbSet.Remove(item);
-            context.SaveChanges();
+			using(var context = createContext())
+			{
+				context.Set<TModel>().Remove(item);
+				context.SaveChanges();
+			}
         }
     }
 }
