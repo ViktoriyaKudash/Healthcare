@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Security;
 using System.Windows;
 using System.Windows.Input;
 
@@ -6,7 +7,6 @@ namespace DoctorApp
 {
 	public class LoginViewModel : DialogViewModelBase
 	{
-        private string password;
         private string login;
 
         public string Login
@@ -18,18 +18,6 @@ namespace DoctorApp
                 {
                     login = value;
                     OnPropertyChanged("Login");
-                }
-            }
-        }
-        public string Password
-        {
-            get { return password; }
-            set
-            {
-                if (password != value)
-                {
-                    password = value;
-                    OnPropertyChanged("Password");
                 }
             }
         }
@@ -56,12 +44,14 @@ namespace DoctorApp
 
         private bool LoginCommandCanExecute()
         {
-            return !string.IsNullOrEmpty(Login) && !string.IsNullOrEmpty(Password);
+            return !string.IsNullOrEmpty(Login);
         }
 
-        private void LoginCommandExecute()
+        private void LoginCommandExecute(object securePassword)
         {
-            if (App.ApplicationState.UnitOfWork.Accounts.Get(a => a.Username == Login && a.Password == Password).Any())
+            var passwordBox = securePassword as System.Windows.Controls.PasswordBox;
+            var password = passwordBox.Password;
+            if (App.ApplicationState.UnitOfWork.Accounts.Get(a => a.Username == Login && a.Password == password).Any())
             {
                 DialogResult = true;
             }

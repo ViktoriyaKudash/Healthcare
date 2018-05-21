@@ -9,6 +9,7 @@ namespace DoctorApp
         public delegate bool MyActionWithBool();
 
         private MyAction execute;
+        private Action<object> executeWithArgs;
         private MyActionWithBool canExecute;
 
         public MyCommand(MyAction execute, MyActionWithBool canExecute)
@@ -16,9 +17,21 @@ namespace DoctorApp
             this.execute = execute;
             this.canExecute = canExecute;
         }
+
+        public MyCommand(Action<object> executeWithArgs, MyActionWithBool canExecute)
+        {
+            this.executeWithArgs = executeWithArgs;
+            this.canExecute = canExecute;
+        }
+
         public MyCommand(MyAction execute)
         {
             this.execute = execute;
+        }
+
+        public MyCommand(Action<object> executeWithArgs)
+        {
+            this.executeWithArgs = executeWithArgs;
         }
 
         public event EventHandler CanExecuteChanged
@@ -38,7 +51,14 @@ namespace DoctorApp
 
         public void Execute(object parameter)
         {
-            execute();
+            if (executeWithArgs == null)
+            {
+                execute();
+            }
+            else
+            {
+                executeWithArgs(parameter);
+            }
         }
     }
 }

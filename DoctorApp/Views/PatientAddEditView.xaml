@@ -10,8 +10,10 @@
 		Title="PatientWindow"
 		Height="300"
 		Width="450">
-
-	<local:MyWindow.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="../Resources/1414.jpg" Opacity="0.9"/>
+    </Window.Background>
+    <local:MyWindow.Resources>
 		<local:ImageToImageSourceConverter x:Key="ImageToImageSourceConverter" />
 	</local:MyWindow.Resources>
 

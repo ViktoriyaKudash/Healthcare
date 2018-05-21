@@ -1,12 +1,16 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DoctorApp
 {
-	public class VisitsViewModel : ViewModelBase
+	public class VisitsViewModel : ViewModelBase, ISearchable
     {
         private VisitViewModel selectedVisit;
+
+        private List<VisitViewModel> refferenceList;
 
         public VisitsViewModel()
         {
@@ -42,9 +46,12 @@ namespace DoctorApp
 			{
 				Visits.Add(new VisitViewModel(visit));
 			}
-		}
 
-		private void AddVisit()
+            refferenceList = new List<VisitViewModel>();
+            refferenceList.AddRange(Visits);
+        }
+
+        private void AddVisit()
         {
             var window = new VisitAddEdtiView();
             var dataContext = new VisitAddEditViewModel();
@@ -60,6 +67,7 @@ namespace DoctorApp
             return SelectedVisit != null;
         }
 
+
         private void EditVisit()
         {
             var window = new VisitAddEdtiView();
@@ -68,6 +76,27 @@ namespace DoctorApp
             if (window.ShowDialog() == true)
             {
                 SelectedVisit.OnPropertyChanged();
+            }
+        }
+
+        public void Search(string value)
+        {
+            Visits.Clear();
+            foreach (var item in refferenceList.Where(v => v.Patient.LastName.ToLower().Contains(value.ToLower()) ||
+                v.Patient.FirstName.ToLower().Contains(value.ToLower()) ||
+                v.Patient.HomeAddress.ToLower().Contains(value.ToLower()) ||
+                v.Text.ToLower().Contains(value.ToLower())))
+            {
+                Visits.Add(item);
+            }
+        }
+
+        public void CancelSearch()
+        {
+            Visits.Clear();
+            foreach (var item in refferenceList)
+            {
+                Visits.Add(item);
             }
         }
     }

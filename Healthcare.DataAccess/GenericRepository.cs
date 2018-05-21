@@ -57,28 +57,6 @@ namespace Healthcare.DataAccess
 			}
         }
 
-        public void CreateWithTransaction(TModel item)
-        {
-			using(var context = createContext())
-			{
-				var transaction = context.Database.BeginTransaction();
-
-				try
-				{
-					context.Set<TModel>().Add(item);
-					context.SaveChanges();
-
-					transaction.Commit();
-				}
-				catch(Exception)
-				{
-					transaction.Rollback();
-
-					throw;
-				}
-			}
-        }
-
         public void Update(TModel item)
         {
 			using(var context = createContext())

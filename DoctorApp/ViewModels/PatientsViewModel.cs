@@ -1,12 +1,16 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DoctorApp
 {
-	public class PatientsViewModel : ViewModelBase
+    public class PatientsViewModel : ViewModelBase, ISearchable
     {
         private PatientViewModel selectedPatient;
+
+        private List<PatientViewModel> refferenceList;
 
         public PatientsViewModel()
         {
@@ -43,6 +47,9 @@ namespace DoctorApp
             {
                 Patients.Add(new PatientViewModel(patient));
             }
+
+            refferenceList = new List<PatientViewModel>();
+            refferenceList.AddRange(Patients);
         }
 
         private void AddPatient()
@@ -69,6 +76,26 @@ namespace DoctorApp
             if (window.ShowDialog() == true)
             {
                 SelectedPatient.OnPropertyChanged();
+            }
+        }
+
+        public void Search(string value)
+        {
+            Patients.Clear();
+            foreach (var item in refferenceList.Where(v => v.LastName.ToLower().Contains(value.ToLower()) ||
+                v.FirstName.ToLower().Contains(value.ToLower()) ||
+                v.HomeAddress.ToLower().Contains(value.ToLower())))
+            {
+                Patients.Add(item);
+            }
+        }
+
+        public void CancelSearch()
+        {
+            Patients.Clear();
+            foreach (var item in refferenceList)
+            {
+                Patients.Add(item);
             }
         }
     }

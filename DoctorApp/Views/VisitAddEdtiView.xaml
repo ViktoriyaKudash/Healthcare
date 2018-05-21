@@ -10,8 +10,10 @@
 				WindowStartupLocation="CenterScreen"
 				Height="375.877"
 				Width="751.235">
-
-	<local:MyWindow.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="../Resources/1414.jpg" Opacity="0.9"/>
+    </Window.Background>
+    <local:MyWindow.Resources>
 		<local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 		<local:ImageToImageSourceConverter x:Key="ImageToImageSourceConverter" />
 	</local:MyWindow.Resources>
@@ -125,11 +127,11 @@
 
 			<TextBlock Text="Date"
 					   Margin="5" />
-			<TextBox Grid.Column="1"
-					 Text="{Binding Date, StringFormat='yyyy-MM-dd HH:mm:ss'}"
-					 Margin="5" />
+            <Calendar Grid.Column="1"
+                      SelectedDate="{Binding Date}"
+                      FirstDayOfWeek="Monday"/>
 
-			<TextBlock Text="Text"
+            <TextBlock Text="Text"
 					   Grid.Row="1"
 					   Margin="5" />
 			<TextBox Grid.Column="1"

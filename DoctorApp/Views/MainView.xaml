@@ -7,22 +7,27 @@
 				mc:Ignorable="d"
 				WindowStartupLocation="CenterScreen"
 				Title="MainWindow"
-				Height="508.242"
-				Width="810.989">
-
+				Height="564.796"
+				Width="839.266">
+    <Window.Background>
+        <ImageBrush ImageSource="../Resources/1414.jpg" Opacity="0.9"/>
+    </Window.Background>
+    
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="auto" />
-			<RowDefinition Height="*" />
-
-		</Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition  Width="*" />
+			<ColumnDefinition Width="*" />
 			<ColumnDefinition Width="auto" />
 			<ColumnDefinition Width="auto" />
 		</Grid.ColumnDefinitions>
 
-		<Menu>
+        <Rectangle Grid.ColumnSpan="3" 
+                   Fill="{Binding ElementName=menu, Path=Background}"/>
+
+        <Menu x:Name="menu">
 			<MenuItem Header="File">
 				<MenuItem Header="Exit" />
 			</MenuItem>
@@ -32,16 +37,50 @@
 				<MenuItem Header="Visits"
 						  Command="{Binding OpenVisitsCommand}" />
 			</MenuItem>
-			<MenuItem Header="Options">
-				<MenuItem Header="White Theme"
+            <MenuItem Header="Options">
+                <MenuItem Header="White Theme"
 						  Command="{Binding WhiteThemeCommand}" />
-				<MenuItem Header="Dark Theme"
+                <MenuItem Header="Dark Theme"
 						  Command="{Binding DarkThemeCommand}" />
-			</MenuItem>
-		</Menu>
+            </MenuItem>
+        </Menu>
 
-		<local:MyFrame x:Name="mainFrame"
+        <TextBox Grid.Column="1" 
+                   Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                   Margin="5, 5, 30, 5"
+                   Background="LightGray"
+                   Foreground="Black"
+                   Width="150"/>
+
+        <Button 
+                Margin="5"
+                Command="{Binding CancelSearchCommand}"
+                Width="22"
+                Height="22"
+                HorizontalAlignment="Right"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Grid.Column="1">
+            <Image Source="../Resources/cancel.png" Height="18" Width="30" />
+        </Button>
+                
+
+        
+        
+        <Button x:Name="button" HorizontalAlignment="Left" 
+          VerticalAlignment="Top" 
+         Width="75" Margin="5"
+                Command="{Binding SearchCommand}"
+                Grid.Column="2">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Resources/search.png" Margin="0,0,5,0" />
+                <TextBlock Text="Search"/>
+            </StackPanel>
+        </Button>
+
+        <local:MyFrame x:Name="mainFrame"
 					   Grid.Row="1"
+                       Grid.ColumnSpan="3"
 					   NavigationUIVisibility="Visible">
 
 		</local:MyFrame>

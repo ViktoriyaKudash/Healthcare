@@ -21,3 +21,36 @@ C:\Users\nikolay.kabash\Downloads\Healthcare-master\Healthcare-master\Healthcare
 C:\Users\nikolay.kabash\Downloads\Healthcare-master\Healthcare-master\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.csproj.CopyComplete
 C:\Users\nikolay.kabash\Downloads\Healthcare-master\Healthcare-master\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.dll
 C:\Users\nikolay.kabash\Downloads\Healthcare-master\Healthcare-master\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.pdb
+C:\Users\User-PC\Downloads\Healthcare-master (1)\Healthcare-master\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.dll.config
+C:\Users\User-PC\Downloads\Healthcare-master (1)\Healthcare-master\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.dll
+C:\Users\User-PC\Downloads\Healthcare-master (1)\Healthcare-master\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.pdb
+C:\Users\User-PC\Downloads\Healthcare-master (1)\Healthcare-master\Healthcare.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\User-PC\Downloads\Healthcare-master (1)\Healthcare-master\Healthcare.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User-PC\Downloads\Healthcare-master (1)\Healthcare-master\Healthcare.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\User-PC\Downloads\Healthcare-master (1)\Healthcare-master\Healthcare.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User-PC\Downloads\Healthcare-master (1)\Healthcare-master\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\User-PC\Downloads\Healthcare-master (1)\Healthcare-master\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\User-PC\Downloads\Healthcare-master (1)\Healthcare-master\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.dll
+C:\Users\User-PC\Downloads\Healthcare-master (1)\Healthcare-master\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.pdb
+D:\УНИВЕР\2kurs\2semestr\курсачч\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.dll.config
+D:\УНИВЕР\2kurs\2semestr\курсачч\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.dll
+D:\УНИВЕР\2kurs\2semestr\курсачч\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.pdb
+D:\УНИВЕР\2kurs\2semestr\курсачч\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\EntityFramework.dll
+D:\УНИВЕР\2kurs\2semestr\курсачч\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\УНИВЕР\2kurs\2semestr\курсачч\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\EntityFramework.xml
+D:\УНИВЕР\2kurs\2semestr\курсачч\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\УНИВЕР\2kurs\2semestr\курсачч\Healthcare-master (1)\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.csproj.CoreCompileInputs.cache
+D:\УНИВЕР\2kurs\2semestr\курсачч\Healthcare-master (1)\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.dll
+D:\УНИВЕР\2kurs\2semestr\курсачч\Healthcare-master (1)\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.pdb
+D:\УНИВЕР\2kurs\2semestr\курсачч\Healthcare-master (1)\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.csprojResolveAssemblyReference.cache
+D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.dll.config
+D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.dll
+D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.pdb
+D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\EntityFramework.dll
+D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\EntityFramework.xml
+D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.csproj.CoreCompileInputs.cache
+D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.dll
+D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.pdb
+D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.csprojResolveAssemblyReference.cache

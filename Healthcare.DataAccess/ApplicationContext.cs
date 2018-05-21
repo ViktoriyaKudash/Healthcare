@@ -14,9 +14,7 @@ namespace Healthcare.DataAccess
         {
             base.OnModelCreating(modelBuilder);
 
-            // Fluent API
-            //modelBuilder.Entity<Patient>().ToTable("PatientsTable");
-            //modelBuilder.Entity<Patient>().HasKey(c => c.Id);
+
         }
 
         public DbSet<Patient> Patients { get; set; }

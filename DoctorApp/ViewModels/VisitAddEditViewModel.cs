@@ -8,13 +8,13 @@ namespace DoctorApp
 	public class VisitAddEditViewModel : AddEditDialogViewModelBase<VisitViewModel>
 	{
 		private string text;
-		private string date;
+		private DateTime date;
 		private PatientViewModel patient;
 
 		public VisitAddEditViewModel()
 			: base()
 		{
-			Date = DateTime.Now.ToString();
+			Date = DateTime.Now;
 			Patients = new ObservableCollection<PatientViewModel>(App.ApplicationState.UnitOfWork.Patients.Get().Select(p => new PatientViewModel(p)));
 		}
 
@@ -22,13 +22,13 @@ namespace DoctorApp
 			: base(visit)
 		{
 			Text = visit.Text;
-			Date = visit.Date.ToString();
+			Date = visit.Date;
 			Patient = visit.Patient;
 
 			Patients = new ObservableCollection<PatientViewModel>();
 		}
 
-		public string Date
+		public DateTime Date
 		{
 			get { return date; }
 			set
@@ -71,7 +71,7 @@ namespace DoctorApp
 
 		protected override bool CanOkExecute()
 		{
-			return string.IsNullOrEmpty(Text) == false && DateTime.TryParse(Date, out DateTime date) && Patient != null;
+			return string.IsNullOrEmpty(Text) == false && Patient != null;
 		}
 
 		protected override void OkExecute()
@@ -80,7 +80,7 @@ namespace DoctorApp
 			{
 				var visit = new Visit()
 				{
-					Date = DateTime.Parse(Date),
+					Date = Date,
 					PatientId = Patient.Id,
 					Text = Text
 				};
@@ -95,7 +95,7 @@ namespace DoctorApp
 			{
 				var visit = App.ApplicationState.UnitOfWork.Visits.FindById(Model.Id);
 
-				visit.Date = DateTime.Parse(Date);
+				visit.Date = Date;
 				visit.Text = Text;
 
 				App.ApplicationState.UnitOfWork.Visits.Update(visit);
