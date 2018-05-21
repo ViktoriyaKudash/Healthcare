@@ -45,20 +45,24 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button  Grid.Column="1"
-                 Command="{Binding AddPatientCommand}"
-               
-                 VerticalAlignment="Top"
-                 Margin="5"
-                 Width="35"
-                 Height="35">
-            <StackPanel Orientation="Vertical">
-                <TextBlock Text="Add"/>
-                <Image Source="../Resources/add (1).png" Margin="0,0,5,0" Height="12" Width="21" />
-            </StackPanel>
-        </Button>
+		<Button Grid.Column="1"
+				Command="{Binding AddPatientCommand}"
+				VerticalAlignment="Top"
+				Margin="5"
+				Width="35"
+				Height="35">
+			<StackPanel Orientation="Vertical">
+				<TextBlock Text="Add" />
+				<Path Data="{StaticResource AddIcon}"
+					  StrokeThickness="1"
+					  Stroke="Black"
+					  Width="14"
+					  Height="14"
+					  Stretch="Uniform" />
+			</StackPanel>
+		</Button>
 
-        <Button  Grid.Column="1"
+		<Button  Grid.Column="1"
                  Command="{Binding EditPatientCommand}"
                  Grid.Row="1"
                  VerticalAlignment="Top"

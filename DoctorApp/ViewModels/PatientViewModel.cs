@@ -39,10 +39,8 @@ namespace DoctorApp
 			}
 			else
 			{
-				using(var stream = new MemoryStream(patient.PhotoBytes))
-				{
-					photo = (Bitmap)Image.FromStream(stream);
-				}
+				var stream = new MemoryStream(patient.PhotoBytes);
+				photo = (Bitmap)Image.FromStream(stream);
 			}
 		}
 

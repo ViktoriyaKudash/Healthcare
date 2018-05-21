@@ -54,3 +54,15 @@ D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master 
 D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.dll
 D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.pdb
 D:\УНИВЕР\2kurs\2semestr\курсач(основной)\Healthcare-master (1)\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\nikolay.kabash\Documents\Projects\Healthcare\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.dll.config
+C:\Users\nikolay.kabash\Documents\Projects\Healthcare\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.dll
+C:\Users\nikolay.kabash\Documents\Projects\Healthcare\Healthcare.DataAccess\bin\Debug\Healthcare.DataAccess.pdb
+C:\Users\nikolay.kabash\Documents\Projects\Healthcare\Healthcare.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\nikolay.kabash\Documents\Projects\Healthcare\Healthcare.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nikolay.kabash\Documents\Projects\Healthcare\Healthcare.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\nikolay.kabash\Documents\Projects\Healthcare\Healthcare.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nikolay.kabash\Documents\Projects\Healthcare\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\nikolay.kabash\Documents\Projects\Healthcare\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\nikolay.kabash\Documents\Projects\Healthcare\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.csproj.CopyComplete
+C:\Users\nikolay.kabash\Documents\Projects\Healthcare\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.dll
+C:\Users\nikolay.kabash\Documents\Projects\Healthcare\Healthcare.DataAccess\obj\Debug\Healthcare.DataAccess.pdb
